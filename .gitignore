@@ -1,0 +1,8 @@
+/.idea/
+/*.iml
+/config/*.*
+/log/
+/target/
+/build/
+**/*.java1
+**/New folder

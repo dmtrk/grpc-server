@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "util.data";
+//option java_outer_classname = "ParsingService";
+//option objc_class_prefix = "RTG";
+
+package util.data;
+
+service ParsingService {
+    rpc parse(ParseRequest) returns (ParseReply) {}
+}
+
+message ParseRequest {
+    bytes data = 1;
+}
+
+message ParseReply {
+    repeated bytes data = 1;
+}

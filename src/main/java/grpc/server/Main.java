@@ -14,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         try{
+            System.out.println(System.getProperties());
             ServerBuilder builder = ServerBuilder.forPort(3333);
             builder.addService(parsingService);
             server = builder.build();

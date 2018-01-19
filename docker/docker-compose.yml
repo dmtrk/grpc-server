@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  grpc-server-i386:
+    build:
+      context: ../
+      dockerfile: docker/i386/Dockerfile
+    image: grpc-server
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    container_name: grpc-server
+
+  grpc-server-x64:
+    build:
+      context: ../
+      dockerfile: docker/amd64/Dockerfile
+    image: grpc-server-x64
+    ports:
+      - "8080:8080"
+    expose:
+      - "8080"
+    container_name: grpc-server-x64

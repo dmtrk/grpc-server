@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+
+  grpc-server-i386:
+    build:
+      context: ../../
+      dockerfile: docker/i386/Dockerfile
+    image: grpc-server-i386
+    ports:
+      - "8081:8081"
+    expose:
+      - "8081"
+    container_name: grpc-server-i386
